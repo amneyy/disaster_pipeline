@@ -11,6 +11,7 @@
   - [Data Cleaning](#cleaning)
   - [Training Classifier](#training)
   - [Starting the Web App](#starting)
+- [Files](#sw)
 - [Software Requirements](#sw)
 - [Credits and Acknowledgements](#credits)
 
