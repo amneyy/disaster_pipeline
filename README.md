@@ -62,17 +62,7 @@ File _models/train_classifier.py_ contains machine learning pipeline that:
 
 <a id='eg'></a>
 
-Running [this command](#com) **from app directory** will start the web app where users can enter their query, i.e., a request message sent during a natural disaster, e.g. _"Please, we need tents and water. We are in Silo, Thank you!"_.
-
-**_Screenshot 1_**
-
-![master](img/master.jpg)
-
-What the app will do is that it will classify the text message into categories so that appropriate relief agency can be reached out for help.
-
-**_Screenshot 2_**
-
-![results](img/res.jpg)
+Running [this command](#com) **from app directory** will start the web app where users can enter their query, i.e., a request message sent during a natural disaster, e.g. _"Help, my house is on fire and I am stuck"_.
 
 <a id='run'></a>
 
@@ -94,10 +84,6 @@ The first two arguments are input data and the third argument is the SQLite Data
 
 _DisasterResponse.db_ already exists in _data_ folder but the above command will still run and replace the file with same information. 
 
-**_Screenshot 3_**
-
-![process_data](img/process_data.jpg)
-
 <a id='training'></a>
 
 ### 3.2. Training Classifier
@@ -108,23 +94,9 @@ After the data cleaning process, run this command **from the project directory**
 python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
 ```
 
-This will use cleaned data to train the model, improve the model with grid search and saved the model to a pickle file (_classifer.pkl_).
+This will use cleaned data to train the model, and then save it into a pickle file (_classifer.pkl_).
 
 _classifier.pkl_ already exists but the above command will still run and replace the file will same information.
-
-_**Screenshot 4**_
-
-![train_classifier_1](img/train_classifier_1.jpg)
-
-It took me around **4 minutes** to train the classifier with grid search.
-
-When the models is saved, it will look something like this.
-
-<a id='acc'></a>
-
-**_Screenshot 5_**
-
-![train_classifier_2.jpg](img/train_classifier_2.jpg)
 
 <a id='starting'></a>
 
@@ -142,25 +114,6 @@ python run.py
 
 This will start the web app and will direct you to a URL where you can enter messages and get classification results for it.
 
-**_Screenshot 6_**
-
-![web_app](img/web_app.jpg)
-
-<a id='conclusion'></a>
-
-## 4. Conclusion
-
-Some information about training data set as seen on the main page of the web app.
-
-**_Screenshot 7_**
-
-![genre](img/genre.jpg)
-
-**_Screenshot 8_**
-
-![dist](img/dist.jpg)
-
-As we can see the data is highly imbalanced. Though the accuracy metric is [high](#acc) (you will see the exact value after the model is trained by grid search, it is ~0.94), it has a poor value for recall (~0.6). So, take appropriate measures when using this model for decision-making process at a larger scale or in a production environment.
 
 <a id='files'></a>
 
