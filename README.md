@@ -26,8 +26,6 @@ In this project, I build a ML model (from <a href="https://www.figure-eight.com/
 
 The _data_ directory contains a data set which are real messages that were sent during disaster events. This project will include a web app where anyone can input a message and it will result to a classification result. 
 
-[Here](#eg) are a few screenshots of the web app.
-
 <a id='components'></a>
 
 ## 2. Project Components
