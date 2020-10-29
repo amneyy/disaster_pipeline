@@ -11,8 +11,6 @@
   - [Data Cleaning](#cleaning)
   - [Training Classifier](#training)
   - [Starting the Web App](#starting)
-- [Conclusion](#conclusion)
-- [Files](#files)
 - [Software Requirements](#sw)
 - [Credits and Acknowledgements](#credits)
 
@@ -144,3 +142,7 @@ This will start the web app and will direct you to a URL where you can enter mes
 ## 6. Software Requirements
 
 This project uses **Python 3.6.6** and the necessary libraries are mentioned in _requirements.txt_.
+
+## 6. Credits and Acknowledgments 
+
+Thanks Future Eight for providing all this data.
