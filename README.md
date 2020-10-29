@@ -115,7 +115,7 @@ This will start the web app and will direct you to a URL where you can enter mes
 
 <a id='files'></a>
 
-## 5. Files
+## 4. Files
 
 <pre>
 .
@@ -139,7 +139,7 @@ This will start the web app and will direct you to a URL where you can enter mes
 
 <a id='sw'></a>
 
-## 6. Software Requirements
+## 5. Software Requirements
 
 This project uses **Python 3.6.6** and the necessary libraries are mentioned in _requirements.txt_.
 
