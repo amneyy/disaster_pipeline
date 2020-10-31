@@ -54,7 +54,7 @@ def clean_data(df):
 	
 	#removing duplicates
 	df = df[df.duplicated()==False]
-	#removing rows containing value 2
+	#removing rows containing value different than 0 or 1
 	df = df[df['related'].isin([0,1])]
 	
 	return df
@@ -72,7 +72,7 @@ def save_data(df, database_filename):
 
    """
 	engine = create_engine('sqlite:///{}'.format(database_filename))
-	df.to_sql('my_db', engine, index=False)
+	df.to_sql('my_db', engine, if_exists='replace', index=False)
 
 
 def main():
