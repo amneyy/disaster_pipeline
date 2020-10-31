@@ -63,13 +63,13 @@ def tokenize(text):
 
 
 def build_model():
-	"""The build function creates and return a ML pipeline
-
-	Parameters:
-	None
-	
-	Returns:
-	Pipeline
+    """The build function creates and return a ML pipeline
+    
+    Parameters:
+    None
+    
+    Returns:
+    Pipeline
 
    """
     pipeline = Pipeline([
@@ -83,16 +83,16 @@ def build_model():
     return pipeline
 
 def evaluate_model(model, X_test, Y_test, category_names):
-	"""The evaluate_model function evaluates the accuracy of the model by returning a classification report on the test values
-
-	Parameters:
-	model (pipeline): Pipeline model created
-	X_test: test message
-	Y_test: categorization of the X_test message
-	category_names: categories 
-	
-	Returns:
-	Classification report of the model
+    """The evaluate_model function evaluates the accuracy of the model by returning a classification report on the test values
+    
+    Parameters:
+    model (pipeline): Pipeline model created
+    X_test: test message
+    Y_test: categorization of the X_test message
+    category_names: categories 
+    
+    Returns:
+    Classification report of the model
 
    """
     y_pred = model.predict(X_test)
@@ -125,15 +125,14 @@ def save_model(model, model_filepath):
 
 def main():
    """The main function loads the data, build and train the model and save it into a pkl file
-
-	Parameters:
-	None
-	
-	Returns:
-	None
+   Parameters:
+   None
+   
+   Returns:
+   None
 
    """
-    if len(sys.argv) == 3:
+   if len(sys.argv) == 3:
         database_filepath, model_filepath = sys.argv[1:]
         print('Loading data...\n    DATABASE: {}'.format(database_filepath))
         X, Y, category_names = load_data(database_filepath)
@@ -153,7 +152,7 @@ def main():
         
         print('Trained model saved!')
 
-    else:
+   else:
         print('Please provide the filepath of the disaster messages database '\
               'as the first argument and the filepath of the pickle file to '\
               'save the model to as the second argument. \n\nExample: python '\
@@ -161,4 +160,4 @@ def main():
 
 
 if __name__ == '__main__':
-	main()
+    main()
