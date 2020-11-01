@@ -53,7 +53,7 @@ def tokenize(text):
     text (string): message to tokenize
     
     Returns:
-    list: Tokenized message
+    list : Tokenized message 
 
    """
     text = re.sub(r"[^a-zA-Z0-9]", " ", text.lower())
@@ -76,6 +76,7 @@ def build_model():
         ('vect', CountVectorizer(tokenizer=tokenize)),
         ('tfidf', TfidfTransformer()),
         ('clf', MultiOutputClassifier(RandomForestClassifier()))])
+    
     parameters = {'vect__ngram_range': ((1, 1), (1, 2)),
                   'vect__max_df': (0.5, 0.75, 1.0)}
     pipeline = GridSearchCV(pipeline, param_grid=parameters, cv=2, verbose=3)
