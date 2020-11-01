@@ -32,7 +32,7 @@ def clean_data(df):
 
 	
 	Returns:
-	dataframe: returns the cleaned dataframe
+	dataframe: returns the cleaned dataframe df
 
    """
 	
