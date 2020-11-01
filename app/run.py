@@ -15,6 +15,15 @@ from sqlalchemy import create_engine
 app = Flask(__name__)
 
 def tokenize(text):
+    """The tokenize function takes a text and remove stop words, punctuation at the end of the sentence and apply word_tokenize
+    
+    Parameters:
+    text (string): message to tokenize
+    
+    Returns:
+    list : Tokenized message 
+    """
+    
     tokens = word_tokenize(text)
     lemmatizer = WordNetLemmatizer()
 
