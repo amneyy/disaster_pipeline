@@ -75,7 +75,7 @@ def index():
                     'title': "Genre"
                 }
             }
-        }
+        },
         
                {
             'data': [
